@@ -1,0 +1,196 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welkom bij TeleShop! Wij hebben alle telefoons{% endblock %}
+
+{% block body %}
+<style>
+    body {padding-top: 56px;}
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .card-title{ color:#17a2b8!important; }
+    .card{ border: none !important; }
+    .titel{ text-align: center; }
+    .bg-item{ background-color: green !important; color: white; padding: 0px 15px; border-radius: 55px; margin-left: 30px;}
+    .bg-item:hover{ cursor: pointer; background-color: forestgreen;}
+    .mb-3{text-align: center; background-color: #f4f4f4; padding: 10px 0px !important;}
+    .list-group-item.active{background-color: #17a2b8!important;}
+    .list-group-item.active:hover{cursor: pointer;}
+    .list-group-item:hover{cursor: pointer;}
+    .cart-icon{background-color: black !important; border-radius: 50%; border: 2px dotted white; margin-left: 30px; padding: 0px 2px;}
+</style>
+
+    {% if app.user %}
+        <div class="mb-3">
+            <b>You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a></b>
+        </div>
+    {% endif %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/default">Teleshop 📱</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/default">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Aanbiedingen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contact">Contact</a>
+                    </li>
+                    <div class="bg-item">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/login">Login</a>
+                        </li>
+                    </div>
+                    <div class="bg-item">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/register">Register</a>
+                    </li>
+                    </div>
+                    <div class="cart-icon">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/cart"> 🛒 </a>
+                    </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-3">
+
+                <h5 class="my-4">Navigeer naar uw favoriete telefoon!</h5>
+                <ul class="list-group">
+                    <li class="list-group-item active">Apple</li>
+                    <li class="list-group-item">Samsung</li>
+                    <li class="list-group-item">OPPO</li>
+                    <li class="list-group-item">Huawei</li>
+                    <li class="list-group-item">Sony</li>
+                </ul>
+
+            </div>
+            <!-- /.col-lg-3 -->
+
+            <div class="col-lg-9">
+
+                <div class="container">
+                    <br>
+                    <h1 class="titel">◼ ALLE SMARTPHONES ◼</h1>
+                    <br>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="https://www.t-mobile.nl/Consumer/media/images/_mobiel/alle-telefoons/samsung/samsung-galaxy-s20-plus/305x450/dvi-back-front_Samsung_S20Plus_Grey_305x450.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Samsung Galaxy S20+ 128GB Grijs
+                                </h4>
+                                <h5>€859.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <small class="text-muted"><button type="button" class="btn btn-info">Voeg toe aan winkelwagen</button></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="https://www.t-mobile.nl/Consumer/media/images/_mobiel/alle-telefoons/apple/iphone-11/shop/black/dvi-front-back_Iphone11_Zwart_305x450.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Apple iPhone 11 64GB Zwart
+                                </h4>
+                                <h5>€924.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <small class="text-muted"><button type="button" class="btn btn-info">Voeg toe aan winkelwagen</button></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="https://www.t-mobile.nl/Consumer/media/images/_mobiel/alle-telefoons/oppo/oppo-find-x/webshop/dvi-front-back_Oppo_Find_X2_Black_305x450.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    OPPO Find X2 256GB Zwart
+                                </h4>
+                                <h5>€349.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <small class="text-muted"><button type="button" class="btn btn-info">Voeg toe aan winkelwagen</button></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="https://www.t-mobile.nl/Consumer/media/images/_mobiel/alle-telefoons/huawei/huawei-p30/p30-lite/black/dvi-front-back_P30Lite_Black_305x450.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Huawei P30 Lite 128GB Zwart
+                                </h4>
+                                <h5>€569.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <small class="text-muted"><button type="button" class="btn btn-info">Voeg toe aan winkelwagen</button></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="https://www.t-mobile.nl/Consumer/media/images/_mobiel/alle-telefoons/samsung/samsung-galaxy-a40/black/dvi-front-back_Samsung_A40-Black_305x450.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Samsung A40 64GB Zwart
+                                </h4>
+                                <h5>€459.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <small class="text-muted"><button type="button" class="btn btn-info">Voeg toe aan winkelwagen</button></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="https://www.t-mobile.nl/Consumer/media/images/_mobiel/alle-telefoons/sony/Sony-Xperia-10-Plus/dvi-front-back_Sony_Xperia-10Plus-black_305x450.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Sony Xperia 10 Plus 64GB Zwart
+                                </h4>
+                                <h5>€239.99</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <small class="text-muted"><button type="button" class="btn btn-info">Voeg toe aan winkelwagen</button></small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-3 bg-info">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Karim el Rhandour 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+{% endblock %}
