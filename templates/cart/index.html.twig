@@ -3,7 +3,7 @@
 
 {% block body %}
     <style>
-        h1{text-align: center;}
+        h1{text-align: left; margin-left: 45px;}
         .bg-item{ background-color: green !important; color: white; padding: 0px 20px; border-radius: 55px; margin-left: 30px;}
         .bg-item:hover{ cursor: pointer; background-color: forestgreen;}
         .mb-3{text-align: center; background-color: #f4f4f4; padding: 10px 0px !important;}
@@ -50,8 +50,8 @@
     <br>
     <br>
     <h1>◼ WINKELWAGEN ◼</h1>
-
-    <ul class="thumbnails">
+    <bR>
+        <ul class="thumbnails">
 
         {% if empty %}
             <h5>Your shopping cart is empty.</h5>
@@ -97,9 +97,9 @@
                     </table>
 
                 </div>
-            </div>
 
         {% endif %}
+            </div>
     </ul>
 
     {#    <H4 class="right">Total in Cart = €{{ total | number_format(2) }}</H4>#}
