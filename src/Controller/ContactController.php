@@ -22,7 +22,7 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $contactFormData = $form->getData();
 
-            $message = (new \Swift_Message('Teleshop'))
+            $message = (new \Swift_Message('Contactformulier'))
                 ->setFrom($contactFormData['email'])
                 ->setTo('karimelrhandour.9@gmail.com')
                 ->setBody(

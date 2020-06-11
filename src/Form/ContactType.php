@@ -18,13 +18,13 @@ class ContactType extends AbstractType
             ->add('email', EmailType::class)
             ->add('onderwerp')
             ->add('bericht', TextareaType::class)
-        ;
+;
     }
 
     public function configureOptions(OptionsResolver $resolver)
-    {
-        $resolver->setDefaults([
-            // Configure your form options here
-        ]);
-    }
+{
+    $resolver->setDefaults([
+        // Configure your form options here
+    ]);
+}
 }

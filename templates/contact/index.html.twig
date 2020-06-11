@@ -4,55 +4,30 @@
 
 {% block body %}
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    *{font-family: 'Poppins', sans-serif;}
     .titel{ text-align: center; }
+    body{background-color: #ededed;}
     .bg-item{ background-color: green !important; color: white; padding: 0px 20px; border-radius: 55px; margin-left: 30px;}
     .bg-item:hover{ cursor: pointer; background-color: forestgreen!important;}
     .mb-3{text-align: center; background-color: #f4f4f4; padding: 10px 0px !important;}
+    .bericht{width: 50%; text-align: center;}
 </style>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-        <div class="container">
-            <a class="navbar-brand" href="#">Teleshop 📱</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/default">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Aanbiedingen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/contact">Contact</a>
-                    </li>
-                    <div class="bg-item">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/login">Login</a>
-                        </li>
-                    </div>
-                    <div class="bg-item">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/register">Register</a>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <div class="container">
         <br>
         <br>
-        <h1 class="titel">◼ CONTACT ◼</h1>
+        <h1 class="titel"><b>◾ CONTACT ◾</b></h1>
         <br>
+        <center><div class="bericht"><p>Heeft u nog vragen?  Stuur ons via onderstaand contactformulier
+                    een berichtje en we nemen zo snel mogelijk contact met u op. </p></div></center>
+
     </div>
     <div class="container">
         <br>
         {{ form_start(our_form) }}
         {{ form_widget(our_form) }}
 
-        <input type="submit" class="btn btn-info" value="Verzenden" />
+        <center><input type="submit" class="btn btn-danger" value="Verzenden" /></center>
 
         {{ form_end(our_form) }}
     </div>
